@@ -6,9 +6,35 @@ spack:
   specs:
     - access-ram3@git.2024.08.0
   packages:
+    # Direct dependencies
     um:
       require:
         - '@13.0'
+
+    # Indirect dependencies
+    eccodes:
+      require:
+         - '@2.34.0'
+
+    netcdf-c:
+      require:
+        - '@4.9.2'
+
+    netcdf-fortran:
+      require:
+        - '@4.5.2'
+
+    fcm:
+      require:
+        - '@2021.05.0'
+
+    gcom:
+      require:
+        - '@7.8'
+
+    openmpi:
+      require:
+        - '@4.1.5'
 
     # Specifications that apply to all packages
     all:
