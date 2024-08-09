@@ -27,6 +27,8 @@ spack:
     fcm:
       require:
         - '@2021.05.0'
+        # TODO: Generalize this Gadi-specific variant for spack.yaml
+        - 'site=nci-gadi'
 
     gcom:
       require:
