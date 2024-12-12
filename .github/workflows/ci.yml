@@ -9,6 +9,7 @@ on:
       - closed
     branches:
       - main
+      - dev
       - backport/*.*
     paths:
       - config/**
@@ -21,7 +22,20 @@ jobs:
   pr-ci:
     name: CI
     if: github.event_name == 'pull_request' && github.event.action != 'closed'
-    uses: access-nri/build-cd/.github/workflows/ci.yml@main
+    uses: access-nri/build-cd/.github/workflows/ci.yml@v3
+    with:
+      model: ${{ vars.NAME }}
+      # root-sbd: if different from vars.NAME
+    permissions:
+      pull-requests: write
+      contents: write
+      statuses: write
+    secrets: inherit
+
+  pr-comment:
+    name: Comment
+    if: github.event_name == 'issue_comment'
+    uses: access-nri/build-cd/.github/workflows/ci-comment.yml@v3
     with:
       model: ${{ vars.NAME }}
       # root-sbd: if different from vars.NAME
@@ -30,21 +44,10 @@ jobs:
       contents: write
     secrets: inherit
 
-  pr-comment:
-    name: Comment
-    if: github.event_name == 'issue_comment'
-    uses: access-nri/build-cd/.github/workflows/ci-comment.yml@main
-    with:
-      model: ${{ vars.NAME }}
-      # root-sbd: if different from vars.NAME
-    permissions:
-      pull-requests: write
-      contents: write
-
   pr-closed:
     name: Closed
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
-    uses: access-nri/build-cd/.github/workflows/ci-closed.yml@main
+    uses: access-nri/build-cd/.github/workflows/ci-closed.yml@v3
     with:
       model: ${{ vars.NAME }}
     secrets: inherit
