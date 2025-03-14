@@ -25,7 +25,7 @@ Any questions about ACCESS-NRI releases of ACCESS-rAM3 should be done through th
 
 ### Build
 
-ACCESS-NRI is using [spack](https://spack.io), a build from source package manager designed for use with high performance computing. This repository contains a [spack environment](https://spack.readthedocs.io/en/latest/environments.html) definition file ([`spack.yaml`](./spack.yaml)) that defines all the essential components of the model, including exact versions.
+ACCESS-NRI is using [spack](https://spack.io), a build from source package manager designed for use with high performance computing. This repository contains a [spack environment](https://spack.readthedocs.io/en/latest/environments.html) manifest file ([`spack.yaml`](./spack.yaml)) that defines all the essential components of the model, including exact versions.
 
 Spack automatically builds all the components and their dependencies, producing model component executables. Spack already contains support for compiling thousands of common software packages. Spack packages for the components are defined in the [spack packages repository](https://github.com/ACCESS-NRI/spack_packages/).
 
@@ -48,7 +48,7 @@ ACCESS-rAM3 is deployed automatically when a new version of the [`spack.yaml`](.
 The deployment process also creates a GitHub release with the same tag. All releases are available under the [Releases page](https://github.com/ACCESS-NRI/ACCESS-rAM3/releases). Each release has a changelog and meta-data with detailed information about the build and deployment, including:
 
 - paths on `gadi` to all executables built in the deployment process (`spack.location`)
-- a `spack.lock` file, which is a complete build provenance document, listing all the components that were built and their dependencies, versions, compiler version, build flags and build architecture
+- a `spack.lock` file, which is a complete build provenance document, listing all the components that were built and their dependencies, versions, compiler version, build flags and build architecture. It is also installable via spack similarly to the `spack.yaml`. 
 - the environment `spack.yaml` file used for deployment
 
 Additionally the deployment creates environment modulefiles, the [standard method for deploying software on `gadi`](https://opus.nci.org.au/display/Help/Environment+Modules). To view available ACCESS-rAM3 versions:
