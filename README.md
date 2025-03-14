@@ -2,7 +2,7 @@
 
 ## About the model
 
-The ACCESS Regional Area Model (ACCESS-rAM) is an implementation of the [UK Met Office (UKMO)](https://www.metoffice.gov.uk/) regional nesting suite, comprising atmosphere and land components.
+The ACCESS Regional Atmosphere Model (ACCESS-rAM) is an implementation of the [UK Met Office (UKMO)](https://www.metoffice.gov.uk/) regional nesting suite, comprising atmosphere and land components.
 Unlike the UKMO regional nesting suite that relies on operational land-surface initial conditions, ACCESS-rAM derives its initial conditions from alternative sources, enhancing its capability for high-resolution regional atmosphere modelling.
 
 For more information see the [ACCESS-Hive Docs model description](https://access-hive.org.au/models/configurations/access-ram/) and [how to run the model](https://access-hive.org.au/models/run-a-model/run-access-ram/).
