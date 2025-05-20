@@ -60,5 +60,4 @@ module avail access-ram3
 
 For users of ACCESS-rAM3 model configurations released by ACCESS-NRI the exact location of the model executables is not required. Model configurations will be updated with new model components when necessary.
 
-For information on contributing your own fixes to the ACCESS-rAM3 `spack.yaml`, see the [CONTRIBUTING.md](./CONTRIBUTING.md) file.
-
+For information on contributing your own fixes to the ACCESS-rAM3 `spack.yaml`, see the [Hive Docs article](https://docs.access-hive.org.au/models/run-a-model/create-a-prerelease/) on creating a prerelease.
