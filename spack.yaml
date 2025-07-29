@@ -4,12 +4,13 @@
 # configuration settings.
 spack:
   specs:
-    - access-ram3@git.2024.08.0
+    - access-ram3@git.11-add-model-vn13p0-rns-to-um-require
   packages:
     # Direct dependencies
     um:
       require:
         - '@13.0'
+        - 'model=vn13p0-rns'
 
     # Indirect dependencies
     eccodes:
