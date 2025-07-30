@@ -70,7 +70,7 @@ spack:
               'SPACK_{name}_ROOT': '{prefix}'
         projections:
           all: '{name}/{version}'
-          access-ram3: '{name}/2024.08.0'
+          access-ram3: '{name}/2025.07.006'
           um: '{name}/13.0'
   config:
     install_tree:
