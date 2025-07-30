@@ -4,7 +4,8 @@
 # configuration settings.
 spack:
   specs:
-    - access-ram3@git.2025.07.0
+    - access-ram3@git.2024.08.0
+    
   packages:
     # Direct dependencies
     um:
