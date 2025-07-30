@@ -11,7 +11,7 @@ spack:
       require:
         - '@13.0'
         - '+eccodes'
-        - '~DRHOOK'
+        - '~DR_HOOK'
 
     # Indirect dependencies
     eccodes:
