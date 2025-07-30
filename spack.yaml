@@ -10,7 +10,8 @@ spack:
     um:
       require:
         - '@13.0'
-        - 'model=vn13p0-rns'
+        - '+eccodes'
+        - '~DRHOOK'
 
     # Indirect dependencies
     eccodes:
