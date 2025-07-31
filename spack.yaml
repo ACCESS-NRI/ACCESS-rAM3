@@ -11,6 +11,7 @@ spack:
       require:
         - '@13.5'
         - model="vn13p5-rns"
+        - +eccodes
 
     # Indirect dependencies
     eccodes:
