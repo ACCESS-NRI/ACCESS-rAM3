@@ -11,6 +11,7 @@ spack:
       require:
         - '@13.5'
         - model="vn13p5-rns"
+        - ~DR_HOOK
         - +eccodes
 
     # Indirect dependencies
@@ -43,7 +44,7 @@ spack:
     # Specifications that apply to all packages
     all:
       require:
-        - '%intel@19.0.3.199'
+        - '%intel@2021.10.0'
         - target=x86_64_v4
   view: true
   concretizer:
@@ -71,7 +72,7 @@ spack:
         projections:
           all: '{name}/{version}'
           access-ram3: '{name}/2024.08.0'
-          um: '{name}/13.0'
+          um: '{name}/13.5'
   config:
     install_tree:
       root: $spack/../restricted/ukmo/release
