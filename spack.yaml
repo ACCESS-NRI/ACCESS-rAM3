@@ -9,7 +9,8 @@ spack:
     # Direct dependencies
     um:
       require:
-        - '@13.0'
+        - '@13.5'
+        - model="vn13p5-rns"
 
     # Indirect dependencies
     eccodes:
@@ -36,7 +37,7 @@ spack:
 
     openmpi:
       require:
-        - '@4.1.5'
+        - '@4.1.7'
 
     # Specifications that apply to all packages
     all:
