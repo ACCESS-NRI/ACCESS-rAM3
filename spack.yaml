@@ -10,6 +10,9 @@ spack:
     um:
       require:
         - '@13.0'
+        - model="vn13p0-rns"
+        - ~DR_HOOK
+        - +eccodes
 
     # Indirect dependencies
     eccodes:
@@ -48,17 +51,11 @@ spack:
     unify: true
   modules:
     default:
-      enable:
-        - tcl
-      roots:
-        tcl: $spack/../release/modules
-        lmod: $spack/../release/lmod
       tcl:
-        hash_length: 0
         include:
           - access-ram3
           - um
-        exclude_implicits: true
+          - openmpi
         all:
           autoload: direct
           conflict:
@@ -67,9 +64,8 @@ spack:
             set:
               'SPACK_{name}_ROOT': '{prefix}'
         projections:
-          all: '{name}/{version}'
           access-ram3: '{name}/2024.08.0'
-          um: '{name}/13.0'
+          um: '{name}/13.0-{hash:7}'
   config:
     install_tree:
       root: $spack/../restricted/ukmo/release
