@@ -51,17 +51,12 @@ spack:
     unify: true
   modules:
     default:
-      enable:
-        - tcl
-      roots:
-        tcl: $spack/../release/modules
-        lmod: $spack/../release/lmod
       tcl:
         hash_length: 0
         include:
           - access-ram3
+          - openmpi
           - um
-        exclude_implicits: true
         all:
           autoload: direct
           conflict:
@@ -70,9 +65,8 @@ spack:
             set:
               'SPACK_{name}_ROOT': '{prefix}'
         projections:
-          all: '{name}/{version}'
           access-ram3: '{name}/2024.08.0'
-          um: '{name}/13.5'
+          um: '{name}/13.5-{hash:7}'
   config:
     install_tree:
       root: $spack/../restricted/ukmo/release
