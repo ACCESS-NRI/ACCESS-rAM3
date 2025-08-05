@@ -4,7 +4,7 @@
 # configuration settings.
 spack:
   specs:
-    - access-ram3@git.2024.08.0
+    - access-ram3@git.2025.08.000=null
   packages:
     # Direct dependencies
     um:
@@ -13,34 +13,27 @@ spack:
         - model="vn13p5-rns"
         - ~DR_HOOK
         - +eccodes
-
     # Indirect dependencies
     eccodes:
       require:
-         - '@2.34.0'
-
+        - '@2.34.0'
     netcdf-c:
       require:
         - '@4.9.2'
-
     netcdf-fortran:
       require:
         - '@4.5.2'
-
     fcm:
       require:
         - '@2021.05.0'
         # TODO: Generalize this Gadi-specific variant for spack.yaml
         - 'site=nci-gadi'
-
     gcom:
       require:
         - '@8.3'
-
     openmpi:
       require:
         - '@4.1.7'
-
     # Specifications that apply to all packages
     all:
       require:
@@ -65,11 +58,11 @@ spack:
             set:
               'SPACK_{name}_ROOT': '{prefix}'
         projections:
-          access-ram3: '{name}/2024.08.0'
+          access-ram3: '{name}/2025.08.000'
           um: '{name}/13.5-{hash:7}'
   config:
     install_tree:
       root: $spack/../restricted/ukmo/release
     source_cache: $spack/../restricted/ukmo/source_cache
     build_stage:
-    - $TMPDIR/restricted/spack-stage
+      - $TMPDIR/restricted/spack-stage
