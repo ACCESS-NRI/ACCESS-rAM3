@@ -17,6 +17,7 @@ spack:
     eccodes:
       require:
         - '@2.34.0'
+        - '+memfs'
     netcdf-c:
       require:
         - '@4.9.2'
