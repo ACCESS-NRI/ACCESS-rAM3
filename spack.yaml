@@ -46,13 +46,11 @@ spack:
   modules:
     default:
       tcl:
-        hash_length: 0
         include:
           - access-ram3
           - openmpi
           - um
         all:
-          autoload: direct
           conflict:
             - '{name}'
           environment:
