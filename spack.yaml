@@ -49,6 +49,7 @@ spack:
         include:
           - access-ram3
           - openmpi
+          - gcom
           - um
         all:
           conflict:
