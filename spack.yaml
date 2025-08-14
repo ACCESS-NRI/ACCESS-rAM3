@@ -4,75 +4,65 @@
 # configuration settings.
 spack:
   specs:
-    - access-ram3@git.2024.08.0
+    - access-ram3@git.2025.08.000
   packages:
     # Direct dependencies
     um:
       require:
-        - '@13.0'
-
+        - '@13.5'
+        - model="vn13p5-rns"
+        - ~DR_HOOK
+        - +eccodes
     # Indirect dependencies
     eccodes:
       require:
-         - '@2.34.0'
-
+        - '@2.34.0'
+        - '+memfs'
     netcdf-c:
       require:
         - '@4.9.2'
-
     netcdf-fortran:
       require:
         - '@4.5.2'
-
     fcm:
       require:
         - '@2021.05.0'
         # TODO: Generalize this Gadi-specific variant for spack.yaml
         - 'site=nci-gadi'
-
     gcom:
       require:
-        - '@7.8'
-
+        - '@8.3'
     openmpi:
       require:
-        - '@4.1.5'
-
+        - '@4.1.7'
     # Specifications that apply to all packages
     all:
       require:
-        - '%intel@19.0.3.199'
+        - '%intel@2021.10.0'
         - target=x86_64_v4
   view: true
   concretizer:
     unify: true
   modules:
     default:
-      enable:
-        - tcl
-      roots:
-        tcl: $spack/../release/modules
-        lmod: $spack/../release/lmod
       tcl:
-        hash_length: 0
         include:
           - access-ram3
+          - openmpi
+          - gcom
           - um
-        exclude_implicits: true
         all:
-          autoload: direct
           conflict:
             - '{name}'
           environment:
             set:
               'SPACK_{name}_ROOT': '{prefix}'
         projections:
-          all: '{name}/{version}'
-          access-ram3: '{name}/2024.08.0'
-          um: '{name}/13.0'
+          access-ram3: '{name}/2025.08.000'
+          um: '{name}/13.5-{hash:7}'
   config:
     install_tree:
       root: $spack/../restricted/ukmo/release
     source_cache: $spack/../restricted/ukmo/source_cache
     build_stage:
-    - $TMPDIR/restricted/spack-stage
+      - $TMPDIR/restricted/spack-stage
