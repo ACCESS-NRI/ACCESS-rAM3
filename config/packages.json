@@ -4,6 +4,7 @@
     "um"
   ],
   "injection": [
-    "openmpi"
+    "openmpi",
+    "gcom"
   ]
 }
