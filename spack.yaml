@@ -43,6 +43,13 @@ spack:
   view: true
   concretizer:
     unify: true
+  modules:
+    default:
+      tcl:
+        all:
+          environment:
+            set:
+              'SPACK_{name}_ROOT': '{prefix}'
   config:
     install_tree:
       root: $spack/../tmp
