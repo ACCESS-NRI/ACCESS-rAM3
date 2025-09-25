@@ -4,7 +4,7 @@
 # configuration settings.
 spack:
   specs:
-    - access-ram3@git.2025.08.000
+    - access-ram3@git.2025.09.000
   packages:
     # Direct dependencies
     um:
@@ -39,13 +39,20 @@ spack:
     all:
       require:
         - '%intel@2021.10.0'
-        - target=x86_64_v4
+        - target=x86_64_v3
   view: true
   concretizer:
     unify: true
+  modules:
+    default:
+      tcl:
+        all:
+          environment:
+            set:
+              'SPACK_{name}_ROOT': '{prefix}'
   config:
     install_tree:
-      root: $spack/../restricted/ukmo/release
+      root: $spack/../tmp
     source_cache: $spack/../restricted/ukmo/source_cache
     build_stage:
       - $TMPDIR/restricted/spack-stage
