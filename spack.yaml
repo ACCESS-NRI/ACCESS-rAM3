@@ -44,6 +44,7 @@ spack:
   concretizer:
     unify: true
   modules:
+    # NOTE: Don't remove! This section is mandatory for the rAM3 suite to work correctly.
     default:
       tcl:
         all:
