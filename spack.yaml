@@ -4,42 +4,42 @@
 # configuration settings.
 spack:
   specs:
-    - access-ram3@git.2025.08.000
+  - access-ram3@git.2025.08.000
   packages:
     # Direct dependencies
     um:
       require:
-        - '@13.5'
-        - model="vn13p5-rns"
-        - ~DR_HOOK
-        - +eccodes
+      - '@13.5'
+      - model="vn13p5-rns"
+      - ~DR_HOOK
+      - +eccodes
     # Indirect dependencies
     eccodes:
       require:
-        - '@2.34.0'
-        - '+memfs'
+      - '@2.34.0'
+      - '+memfs'
     netcdf-c:
       require:
-        - '@4.9.2'
+      - '@4.9.2'
     netcdf-fortran:
       require:
-        - '@4.5.2'
+      - '@4.5.2'
     fcm:
       require:
-        - '@2021.05.0'
-        # TODO: Generalize this Gadi-specific variant for spack.yaml
-        - 'site=nci-gadi'
+      - '@2021.05.0'
+      # TODO: Generalize this Gadi-specific variant for spack.yaml
+      - 'site=nci-gadi'
     gcom:
       require:
-        - '@8.3'
+      - '@8.3'
     openmpi:
       require:
-        - '@4.1.7'
+      - '@4.1.7'
     # Specifications that apply to all packages
     all:
       require:
-        - '%intel@2021.10.0'
-        - target=x86_64_v4
+      - '%intel@2021.10.0'
+      - target=x86_64_v4
   view: true
   concretizer:
     unify: true
