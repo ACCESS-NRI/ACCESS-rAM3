@@ -10,7 +10,7 @@ spack:
   specs:
   - access-ram3
   packages:
-    # Direct dependencies
+    # Direct dependencies testing
     um:
       require:
       - '@13.5'
