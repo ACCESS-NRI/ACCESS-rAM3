@@ -36,6 +36,7 @@ spack:
     gcom:
       require:
       - '@4d188611aa79e7c5d8cd9f8945bd93c1c52186bf'
+      # Temporary change to trigger redeploy
     openmpi:
       require:
       - '@4.1.7'
