@@ -35,7 +35,7 @@ spack:
       - 'site=nci-gadi'
     gcom:
       require:
-      - '@8.3'
+      - '@4d188611aa79e7c5d8cd9f8945bd93c1c52186bf'
     openmpi:
       require:
       - '@4.1.7'
