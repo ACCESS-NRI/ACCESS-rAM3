@@ -25,9 +25,13 @@ spack:
     netcdf-c:
       require:
       - '@4.9.2'
+      - '+shared'
     netcdf-fortran:
       require:
       - '@4.5.2'
+    hdf5:
+      require:
+      - '+shared'
     fcm:
       require:
       - '@2021.05.0'
@@ -36,9 +40,16 @@ spack:
     gcom:
       require:
       - '@8.3'
+      - '+mpi'
+    jasper:
+      require:
+      - '~opengl'
     openmpi:
       require:
       - '@4.1.7'
+    python:
+      require:
+      - '@3.11.7'
     # Compilers
     c:
       require:
