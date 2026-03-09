@@ -31,6 +31,7 @@ spack:
       - '@4.5.2'
     hdf5:
       require:
+      - '@1.14.3'
       - '+shared'
     fcm:
       require:
@@ -43,6 +44,7 @@ spack:
       - '+mpi'
     jasper:
       require:
+      - '@4.2.8'
       - '~opengl'
     openmpi:
       require:
