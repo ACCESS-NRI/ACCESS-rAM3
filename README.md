@@ -7,7 +7,7 @@
 The ACCESS Regional Atmosphere Model (ACCESS-rAM) is an implementation of the [UK Met Office (UKMO)](https://www.metoffice.gov.uk/) regional nesting suite, comprising atmosphere and land components.
 Unlike the UKMO regional nesting suite that relies on operational land-surface initial conditions, ACCESS-rAM derives its initial conditions from alternative sources, enhancing its capability for high-resolution regional atmosphere modelling.
 
-For more information see the [ACCESS-Hive Docs model description](https://access-hive.org.au/models/configurations/access-ram/) and [how to run the model](https://access-hive.org.au/models/run-a-model/run-access-ram/).
+For more information see the [ACCESS-Hive Docs model description](https://docs.access-hive.org.au/models/access_models/access-ram/) and [how to run the model](https://docs.access-hive.org.au/models/run_a_model/run_access-ram/).
 
 ## About this repository
 
@@ -31,7 +31,7 @@ ACCESS-NRI is using [spack](https://spack.io), a build from source package manag
 
 Spack automatically builds all the components and their dependencies, producing model component executables. Spack already contains support for compiling thousands of common software packages. Spack packages for the components are defined in the [spack packages repository](https://github.com/ACCESS-NRI/spack_packages/).
 
-ACCESS-rAM3 is built and deployed automatically to `gadi` on NCI (see below). However it is possible to use spack to compile the model using the `spack.yaml` environment file in this repository. To do so follow the [instructions on for configuring spack on `gadi`]([https://forum.access-hive.org.au/t/how-to-build-access-om2-on-gadi/1545](https://access-hive.org.au/getting_started/spack/)).
+ACCESS-rAM3 is built and deployed automatically to `gadi` on NCI (see below). However it is possible to use spack to compile the model using the `spack.yaml` environment file in this repository. To do so follow the [instructions on for configuring spack on `gadi`](https://docs.access-hive.org.au/getting_started/spack/).
 
 Then clone this repository and run the following commands on `gadi`:
 
