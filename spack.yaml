@@ -7,6 +7,12 @@ spack:
   # _name and _version are reserved definitions that inform build-cd deployments, and have no effect otherwise
   - _name: [access-ram3]
   - _version: [2025.08.000]
+  # _spack-version and _custom-scopes inform the branch of spack to use, and custom scopes if applicable, respectively
+  - _spack-version: ["1.1"]
+  - _custom-scopes: ["ukmo-restricted-scope"]
+  # Release database provenance information - packages for inclusion into the database, and packages just for injection into the modules
+  - _provenance: ["um"]
+  - _injection: ["openmpi", "gcom"]
   specs:
   - access-ram3
   packages:
@@ -77,3 +83,8 @@ spack:
           environment:
             set:
               'SPACK_{name}_ROOT': '{prefix}'
+  repos:
+    access_spack_packages:
+      git: https://github.com/ACCESS-NRI/access-spack-packages.git
+      tag: 2026.02.004
+      destination: $env/.package_repos/access-spack-packages
