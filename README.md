@@ -1,4 +1,4 @@
-![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fgithub.com%2FACCESS-NRI%2FACCESS-rAM3%2Fraw%2Fmain%2Fconfig%2Fversions.json&query=%24.spack-packages&label=ACCESS-NRI%2Fspack-packages) ![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fgithub.com%2FACCESS-NRI%2FACCESS-rAM3%2Fraw%2Fmain%2Fconfig%2Fversions.json&query=%24.spack&label=ACCESS-NRI%2Fspack) ![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fgithub.com%2FACCESS-NRI%2Fbuild-cd%2Fraw%2FHEAD%2Fconfig%2Fsettings.json&query=%24.deployment.Gadi.Release.%5B'0.22'%5D.spack-config&label=ACCESS-NRI%2Fspack-config%20(Gadi))
+![Dynamic YAML Badge](https://img.shields.io/badge/dynamic/yaml?url=https%3A%2F%2Fgithub.com%2FACCESS-NRI%2FACCESS-rAM3%2Fraw%2Fmain%2Fspack.yaml&query=%24.spack.repos.access_spack_packages.tag&label=ACCESS-NRI%2Faccess-spack-packages) ![Dynamic YAML Badge](https://img.shields.io/badge/dynamic/yaml?url=https%3A%2F%2Fgithub.com%2FACCESS-NRI%2FACCESS-rAM3%2Fraw%2Fmain%2Fspack.yaml&query=%24.spack.definitions%5B*%5D._spack-version%5B0%5D&label=ACCESS-NRI%2Fspack) ![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fgithub.com%2FACCESS-NRI%2Fbuild-cd%2Fraw%2FHEAD%2Fconfig%2Fsettings.json&query=%24.deployment.Gadi.Release.%5B'1.1'%5D.spack-config&label=ACCESS-NRI%2Fspack-config%20(Gadi))
 
 # ACCESS-rAM3
 
@@ -11,7 +11,7 @@ For more information see the [ACCESS-Hive Docs model description](https://docs.a
 
 ## About this repository
 
-This is the Model Deployment Repository for the ACCESS-rAM3 model. 
+This is the Model Deployment Repository for the ACCESS-rAM3 model.
 
 ## Releases
 
@@ -50,7 +50,7 @@ ACCESS-rAM3 is deployed automatically when a new version of the [`spack.yaml`](.
 The deployment process also creates a GitHub release with the same tag. All releases are available under the [Releases page](https://github.com/ACCESS-NRI/ACCESS-rAM3/releases). Each release has a changelog and meta-data with detailed information about the build and deployment, including:
 
 - paths on `gadi` to all executables built in the deployment process (`spack.location`)
-- a `spack.lock` file, which is a complete build provenance document, listing all the components that were built and their dependencies, versions, compiler version, build flags and build architecture. It is also installable via spack similarly to the `spack.yaml`. 
+- a `spack.lock` file, which is a complete build provenance document, listing all the components that were built and their dependencies, versions, compiler version, build flags and build architecture. It is also installable via spack similarly to the `spack.yaml`.
 - the environment `spack.yaml` file used for deployment
 
 Additionally the deployment creates environment modulefiles, the [standard method for deploying software on `gadi`](https://opus.nci.org.au/display/Help/Environment+Modules). To view available ACCESS-rAM3 versions:
