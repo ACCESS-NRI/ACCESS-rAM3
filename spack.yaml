@@ -13,11 +13,11 @@ spack:
     # Direct dependencies
     um:
       require:
-        - '@13.8'
-        - model="vn13p5-rns"
-        - ~DR_HOOK
-        - +eccodes
-        - um_sources=""
+      - '@13.8'
+      - model="vn13p5-rns"
+      - ~DR_HOOK
+      - +eccodes
+      - um_sources=""
     # Indirect dependencies
     eccodes:
       require:
