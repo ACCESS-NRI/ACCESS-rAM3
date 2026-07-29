@@ -40,6 +40,7 @@ spack:
       - 'site=nci-gadi'
     gcom:
       require:
+      - '@8'
       - '+mpi'
     jasper:
       require:
