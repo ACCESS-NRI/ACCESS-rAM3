@@ -13,45 +13,35 @@ spack:
     # Direct dependencies
     um:
       require:
-      - '@13.5'
-      - model="vn13p5-rns"
-      - ~DR_HOOK
-      - +eccodes
+      - '@13.1'
+      - model="vn13p1-am"
+      - jules_ref="2026.06.0"
+      - um_ref="2026.05.0"
+      - ukca_ref="AM3-2026.03.0"
+      - shumlib_ref="2026.06.0"
+
     # Indirect dependencies
-    eccodes:
-      require:
-      - '@2.34.0'
-      - '+memfs'
     netcdf-c:
       require:
       - '@4.9.2'
-      - '+shared'
+
     netcdf-fortran:
       require:
       - '@4.5.2'
-    hdf5:
-      require:
-      - '@1.14.3'
-      - '+shared'
+
     fcm:
       require:
       - '@2021.05.0'
       # TODO: Generalize this Gadi-specific variant for spack.yaml
       - 'site=nci-gadi'
+
     gcom:
       require:
-      - '@8.3'
-      - '+mpi'
-    jasper:
-      require:
-      - '@4.2.8'
-      - '~opengl'
+      - '@7.9'
+
     openmpi:
       require:
       - '@4.1.7'
-    python:
-      require:
-      - '@3.11.7'
     # Compilers
     c:
       require:
@@ -62,9 +52,10 @@ spack:
     fortran:
       require:
       - intel-oneapi-compilers-classic@2021.10.0
+
     # Specifications that apply to all packages
     all:
-      prefer:
+      require:
       - target=x86_64_v4
   view: true
   concretizer:
