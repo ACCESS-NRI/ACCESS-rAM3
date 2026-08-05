@@ -60,11 +60,3 @@ spack:
   view: true
   concretizer:
     unify: true
-  modules:
-    # NOTE: Don't remove! This section is mandatory for the rAM3 suite to work correctly.
-    default:
-      tcl:
-        all:
-          environment:
-            set:
-              'SPACK_{name}_ROOT': '{prefix}'
