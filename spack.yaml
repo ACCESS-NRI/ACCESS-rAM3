@@ -19,7 +19,7 @@ spack:
     # Direct dependencies
     um:
       require:
-      - '@13.5'
+      - '@13.8'
       - model="vn13p5-rns"
       - ~DR_HOOK
       - +eccodes
@@ -44,10 +44,6 @@ spack:
       - '@2021.05.0'
       # TODO: Generalize this Gadi-specific variant for spack.yaml
       - 'site=nci-gadi'
-    gcom:
-      require:
-      - '@8.3'
-      - '+mpi'
     jasper:
       require:
       - '@4.2.8'
