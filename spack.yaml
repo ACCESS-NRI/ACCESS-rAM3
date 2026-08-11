@@ -23,6 +23,9 @@ spack:
       - model="vn13p5-rns"
       - ~DR_HOOK
       - +eccodes
+      - um_sources=""
+      - casim_sources=""
+      
     # Indirect dependencies
     eccodes:
       require:
