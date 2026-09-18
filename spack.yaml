@@ -6,7 +6,7 @@ spack:
   definitions:
   # _name and _version are reserved definitions that inform build-cd deployments, and have no effect otherwise
   - _name: [access-ram3]
-  - _version: [2025.08.000]
+  - _version: [2026.09.000]
   # _spack-version and _custom-scopes inform the branch of spack to use, and custom scopes if applicable, respectively
   - _spack-version: ["1.1"]
   - _custom-scopes: ["ukmo-restricted-scope"]
@@ -19,10 +19,11 @@ spack:
     # Direct dependencies
     um:
       require:
-      - '@13.5'
-      - model="vn13p5-rns"
+      - '@13.8'
+      - model="vn13p8-rns"
       - ~DR_HOOK
       - +eccodes
+      - fcflags_overrides="-qno-openmp -qno-opt-dynamic-align"
     # Indirect dependencies
     eccodes:
       require:
@@ -46,7 +47,7 @@ spack:
       - 'site=nci-gadi'
     gcom:
       require:
-      - '@8.3'
+      - '@8.4'
       - '+mpi'
     jasper:
       require:
@@ -86,5 +87,5 @@ spack:
   repos:
     access_spack_packages:
       git: https://github.com/ACCESS-NRI/access-spack-packages.git
-      tag: 2026.02.004
+      commit: fa3a791c1ffdb4c7d92f280a577a3f371e813c4f
       destination: $env/package-repos/access-spack-packages
