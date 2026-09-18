@@ -23,7 +23,7 @@ spack:
       - model="vn13p8-rns"
       - ~DR_HOOK
       - +eccodes
-      - fcflags_overrides="-qno-openmp -qnoopt-dynamic-align"
+      - fcflags_overrides="-qno-openmp -qno-opt-dynamic-align"
     # Indirect dependencies
     eccodes:
       require:
