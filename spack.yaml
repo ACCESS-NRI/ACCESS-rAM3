@@ -57,7 +57,8 @@ spack:
       - '@5.0.8'
     python:
       require:
-      - '@3.11.7'
+      - '@3.12.13'
+      - target=x86_64 # Try to match external
     # Compilers
     c:
       require:
