@@ -19,8 +19,8 @@ spack:
     # Direct dependencies
     um:
       require:
-      - '@13.5'
-      - model="vn13p5-rns"
+      - '@13.8'
+      - model="vn13p8-am"
       - ~DR_HOOK
       - +eccodes
     # Indirect dependencies
@@ -46,7 +46,7 @@ spack:
       - 'site=nci-gadi'
     gcom:
       require:
-      - '@8.3'
+      - '@8.4'
       - '+mpi'
     jasper:
       require:
