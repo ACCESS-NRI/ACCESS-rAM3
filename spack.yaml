@@ -23,6 +23,13 @@ spack:
       - model="vn13p8-am"
       - ~DR_HOOK
       - +eccodes
+      - um_ref='UKMO_vn13.8'
+      - jules_ref='JULES_vn7.8'
+      - socrates_ref='um13.8'
+      - ukca_ref='um13.8'
+      - casim_ref='um13.8'
+      - shumlib_ref='um13.8'
+
     # Indirect dependencies
     eccodes:
       require:
@@ -52,9 +59,18 @@ spack:
       require:
       - '@4.2.8'
       - '~opengl'
-    openmpi:
+   openmpi:
+      externals:
+      - spec: "openmpi@4.1.4"
+        prefix: /apps/openmpi/4.1.4
+        modules: [openmpi/4.1.4]
+        extra_attributes:
+          environment:
+            prepend_path:
+              CMAKE_PREFIX_PATH: /apps/openmpi/4.1.4/include/Intel
       require:
-      - '@4.1.7'
+      - '@4.1.4'
+
     python:
       require:
       - '@3.11.7'
