@@ -59,7 +59,7 @@ spack:
       require:
       - '@4.2.8'
       - '~opengl'
-     openmpi:
+    openmpi:
       externals:
       - spec: "openmpi@4.1.4"
         prefix: /apps/openmpi/4.1.4
