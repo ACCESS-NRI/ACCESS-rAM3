@@ -54,7 +54,7 @@ spack:
       - site=nci-gadi
     gcom:
       require:
-      - '@git.vn7.9=8.4'
+      - '@git.vn7.8=8.4'
       - '+mpi'
     jasper:
       require:
