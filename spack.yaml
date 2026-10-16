@@ -16,6 +16,19 @@ spack:
   specs:
   - access-ram3
   packages:
+    intel-oneapi-compilers-classic:
+      buildable: false            # optional: never build it, only use the external
+      externals:
+      - spec: intel-oneapi-compilers-classic@2021.5.0
+        prefix: /apps/intel-ct/wrapper
+        modules:
+        - intel-compiler/2021.5.0   # whatever `module load` name you use
+        extra_attributes:
+          compilers:
+            c: /apps/intel-ct/wrapper/icc
+            cxx: /apps/intel-ct/wrapper/icpc
+            fortran: /apps/intel-ct/wrapper/ifort
+
     # Direct dependencies
     um:
       require:
@@ -78,13 +91,13 @@ spack:
     # Compilers
     c:
       require:
-      - intel-oneapi-compilers-classic@2021.10.0
+      - intel-oneapi-compilers-classic@2021.5.0
     cxx:
       require:
-      - intel-oneapi-compilers-classic@2021.10.0
+      - intel-oneapi-compilers-classic@2021.5.0
     fortran:
       require:
-      - intel-oneapi-compilers-classic@2021.10.0
+      - intel-oneapi-compilers-classic@2021.5.0
     # Specifications that apply to all packages
     all:
       prefer:
