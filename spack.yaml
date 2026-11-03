@@ -6,13 +6,13 @@ spack:
   definitions:
   # _name and _version are reserved definitions that inform build-cd deployments, and have no effect otherwise
   - _name: [access-ram3]
-  - _version: [2025.08.000]
+  - _version: [2026.11.000]
   # _spack-version and _custom-scopes inform the branch of spack to use, and custom scopes if applicable, respectively
   - _spack-version: ["1.1"]
-  - _custom-scopes: ["ukmo-restricted-scope"]
+  - _custom-scopes: [ukmo-restricted-scope]
   # Release database provenance information - packages for inclusion into the database, and packages just for injection into the modules
-  - _provenance: ["um"]
-  - _injection: ["openmpi", "gcom"]
+  - _provenance: [um]
+  - _injection: [openmpi, gcom]
   specs:
   - access-ram3
   packages:
@@ -21,9 +21,14 @@ spack:
       require:
       - '@13.8'
       - model="vn13p8-am"
+      - um_ref="UKMO_vn13.8"
+      - jules_ref="JULES_vn7.8"
+      - ukca_ref="um13.8"
+      - socrates_ref="um13.8"
+      - casim_ref="um13.8"
+      - shumlib_ref="um13.8"
       - ~DR_HOOK
       - +eccodes
-      - um_sources=""
     # Indirect dependencies
     eccodes:
       require:
